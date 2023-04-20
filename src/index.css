@@ -23,7 +23,6 @@
 
 body {
   background-color: var(--neutral-very-light-grayish-blue);
-  /* background-color: blue; */
   min-height: 100vh;
 }
 
@@ -31,13 +30,12 @@ body {
   display: flex;
   min-height: 100%;
   justify-content: center;
-  /* padding-block: 3em; Big screen*/
 }
 
 
 #main {
   background-color: var(--neutral-white);
-  max-width: 1200px;
+  max-width: 630px;
   margin: 0 auto;
   padding: 2em 1em;
   min-height: 10vh;
@@ -70,6 +68,8 @@ body {
 
 .toggleRead {
   color: var(--neutral-dark-grayish-blue);
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .notificationBox {
@@ -83,12 +83,14 @@ body {
   color: var(--neutral-grayish-blue);
 }
 
-.avatar {
+.avatar, .picture {
   width: 40px;
+  align-self: flex-start;
 }
 
 .notification {
   font-size: 14px;
+  word-spacing: 1px;
 }
 
 .notification--trigger {
@@ -107,10 +109,31 @@ body {
   background-color: var(--primary-red);
   border-radius: 50px;
   display: inline-block;
+  margin-left: 0.2rem;
 }
 
 .notification--time {
   margin-top: 0.3rem;
+}
+
+.privateMsg {
+  margin-top: 0.4em;
+  padding: .8em;
+  border: 1px solid var(--neutral-light-grayish-blue-2);
+  border-radius: 8px;
+}
+
+.pictureHighlight {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groupHighlight {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: 800;
 }
 
 @media (min-width: 700px) {

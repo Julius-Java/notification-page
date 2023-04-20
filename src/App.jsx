@@ -1,7 +1,14 @@
 import { useState } from 'react'
-import angelaImg from "./assets/images/avatar-angela-gray.png"
+import NotificationBox from './components/NotificationBox'
+import data from './data'
 
 function App() {
+
+  const notifications = data.map((items, index) => {
+    return (
+      <NotificationBox key={index} items={items} />
+    )
+  })
 
   return (
     <main id='main'>
@@ -18,46 +25,7 @@ function App() {
       </section>
 
       <section className='messages'>
-        <div className='notificationBox'>
-          <img className='avatar' src={angelaImg} />
-
-          <div className='notification'>
-            <div>
-              <p className='notification--text'> <span className='notification--trigger'>Mark Webber</span> reacted to you recent post <span className='notificationHighlight'>My first tournament today! </span> <span className='notification--dot'></span>
-              </p>
-            </div>
-
-            <p className='notification--time'>1m ago</p>
-          </div>
-        </div>
-
-        <div className='notificationBox'>
-          <img className='avatar' src={angelaImg} />
-
-          <div className='notification'>
-            <div>
-              <p className='notification--text'> <span className='notification--trigger'>Mark Webber</span> reacted to you recent post <span className='notificationHighlight'>My first tournament today! </span> <span className='notification--dot'></span>
-              </p>
-            </div>
-
-            <p className='notification--time'>1m ago</p>
-          </div>
-        </div>
-
-                <div className='notificationBox'>
-          <img className='avatar' src={angelaImg} />
-
-          <div className='notification'>
-            <div>
-              <p className='notification--text'> <span className='notification--trigger'>Mark Webber</span> reacted to you recent post <span className='notificationHighlight'>My first tournament today! </span> <span className='notification--dot'></span>
-              </p>
-            </div>
-
-            <p className='notification--time'>1m ago</p>
-          </div>
-        </div>
-
-        
+        {notifications}
       </section>
 
     </main>
