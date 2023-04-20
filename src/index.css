@@ -24,6 +24,7 @@
 body {
   background-color: var(--neutral-very-light-grayish-blue);
   min-height: 100vh;
+  position: relative;
 }
 
 #root {
@@ -142,6 +143,36 @@ body {
   text-decoration: none;
   color: var(--primary-blue);
   font-weight: 800;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearModal {
+  background-color: white;
+  max-width: 300px;
+  width: 80%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 18px;
+  padding: 1em 0;
+}
+
+.submitModal p {
+  font-weight: 700;
+}
+
+.gif {
+  width: 200px;
 }
 
 @media (min-width: 600px) {

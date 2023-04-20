@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import NotificationBox from './components/NotificationBox'
 import data from './data'
+import ClearModal from './components/ClearModal'
+import celebrationGif from "./assets/jumping.gif"
 
 function App() {
   const [notificationData, setNotificationData] = useState(data)
 
-  // const [numOfUnread, setNumOfUnread] = useState(notificationData.filter((obj) => obj.msgStatus === false).length)
+  const [showModal, setShowModal] = useState(false)
 
   const numOfUnread = notificationData.filter((obj) => obj.msgStatus === false).length
+
+  function clickAway() {
+    setShowModal(prevValue => !prevValue)
+  }
 
   function setMsgStatus(id) {
     setNotificationData((prevNotifications) => {
@@ -23,12 +29,20 @@ function App() {
         return {...notification, msgStatus: true}
       })
     })
+
+    clickAway()
   }
 
   // Map over notification data and render
   const notifications = notificationData.map((items, index) => {
     return (
-      <NotificationBox setMsgStatus={setMsgStatus} readStatus={items.msgStatus} key={index} id={index} items={items} />
+      <NotificationBox
+        setMsgStatus={setMsgStatus}
+        readStatus={items.msgStatus}
+        key={index}
+        id={index}
+        items={items}
+      />
     )
   })
 
@@ -50,6 +64,7 @@ function App() {
         {notifications}
       </section>
 
+      <ClearModal gif={celebrationGif} showModal={showModal} handleClick={clickAway} />
     </main>
   )
 }
