@@ -1,4 +1,3 @@
-import angelaImg from "../assets/images/avatar-kimberly-smith.png"
 
 
 export default function NotificationBox(props) {
@@ -11,7 +10,7 @@ export default function NotificationBox(props) {
             <div className={'notification ' + (highlightAvatar && "pictureHighlight")}>
                 <div>
                     <p className='notification--text'>
-                        <span className='notification--trigger'>{trigger} </span>
+                        <a href="#" className='notification--trigger'>{trigger} </a>
                         {message}
                         {postHighlight && <span className='notificationHighlight'> {postHighlight} </span>}
                         {groupHighlight && <a href='#' className='groupHighlight'> {groupHighlight} </a>}
