@@ -76,12 +76,13 @@ body {
 .notificationBox {
   display: flex;
   align-items: center;
-  background-color: var(--neutral-very-light-grayish-blue);
+  /* background-color: var(--neutral-very-light-grayish-blue); */
   padding: 1.2em 1em;
   border-radius: 8px;
   gap: 1rem;
   margin-bottom: 1rem;
   color: var(--neutral-grayish-blue);
+  cursor: pointer;
 }
 
 .avatar, .picture {

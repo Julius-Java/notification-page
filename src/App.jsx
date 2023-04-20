@@ -3,10 +3,32 @@ import NotificationBox from './components/NotificationBox'
 import data from './data'
 
 function App() {
+  const [notificationData, setNotificationData] = useState(data)
 
-  const notifications = data.map((items, index) => {
+  // const [numOfUnread, setNumOfUnread] = useState(notificationData.filter((obj) => obj.msgStatus === false).length)
+
+  const numOfUnread = notificationData.filter((obj) => obj.msgStatus === false).length
+
+  function setMsgStatus(id) {
+    setNotificationData((prevNotifications) => {
+      return prevNotifications.map((notification, index) => {
+        return index === id ? {...notification, msgStatus: true} : notification
+      })
+    })
+  }
+
+  function markAll() {
+    setNotificationData((prevNotifications) => {
+      return prevNotifications.map((notification) => {
+        return {...notification, msgStatus: true}
+      })
+    })
+  }
+
+  // Map over notification data and render
+  const notifications = notificationData.map((items, index) => {
     return (
-      <NotificationBox key={index} items={items} />
+      <NotificationBox setMsgStatus={setMsgStatus} readStatus={items.msgStatus} key={index} id={index} items={items} />
     )
   })
 
@@ -16,11 +38,11 @@ function App() {
       <section className='top'>
         <div className='notificationBar'>
           <h1 className='heading'>Notifications</h1>
-          <div className='notificationCount'>3</div>
+          {numOfUnread > 0 && (<div className='notificationCount'>{numOfUnread}</div>)}
         </div>
 
         <div className='markRead'>
-          <p className='toggleRead'>Mark all as read</p>
+          <p onClick={markAll} className='toggleRead'>Mark all as read</p>
         </div>
       </section>
 
