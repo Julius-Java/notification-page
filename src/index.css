@@ -41,6 +41,7 @@ body {
   padding: 2em 1em;
   min-height: 10vh;
   border-radius: 9px;
+  box-shadow: 0px 0px 20px 0px var(--neutral-light-grayish-blue-2);
 }
 
 .top {
@@ -74,6 +75,10 @@ body {
   cursor: pointer;
 }
 
+.toggleRead:hover {
+  color: var(--primary-blue);
+}
+
 .notificationBox {
   display: flex;
   align-items: center;
@@ -102,6 +107,10 @@ body {
   text-decoration: none;
 }
 
+.notification--trigger:hover, .notificationHighlight:hover {
+  color: var(--primary-blue);
+}
+
 .notificationHighlight {
   color: var(--neutral-dark-grayish-blue);
   font-weight: bold;
@@ -127,10 +136,16 @@ body {
   border-radius: 8px;
 }
 
+.privateMsg:hover {
+  background-color: var(--neutral-light-grayish-blue-1);
+  border: 1px solid var(--neutral-light-grayish-blue-1);
+}
+
 .pictureHighlight {
   width: 100%;
   display: flex;
   align-items: center;
+  gap: .4rem;
   justify-content: space-between;
 }
 
@@ -159,24 +174,32 @@ body {
 
 .clearModal {
   background-color: white;
-  max-width: 300px;
+  max-width: 200px;
   width: 80%;
   border-radius: 15px;
   text-align: center;
   font-size: 18px;
-  padding: 1em 0;
+  padding: 1.2em 0;
 }
 
-.submitModal p {
+.clearModal p {
   font-weight: 700;
+  color: var(--neutral-grayish-blue);
 }
 
 .gif {
-  width: 200px;
+  width: 100px;
 }
 
 @media (min-width: 600px) {
   #root {
     padding-block: 3em;
+  }
+  .clearModal {
+    max-width: 300px;
+  }
+
+  .gif {
+    width: 150px;
   }
 }

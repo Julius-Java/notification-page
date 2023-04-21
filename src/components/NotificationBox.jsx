@@ -22,7 +22,7 @@ export default function NotificationBox(props) {
                     <p className='notification--text'>
                         <a href="#" className='notification--trigger'>{trigger} </a>
                         {message}
-                        {postHighlight && <span className='notificationHighlight'> {postHighlight} </span>}
+                        {postHighlight && <a className='notificationHighlight'> {postHighlight} </a>}
                         {groupHighlight && <a href='#' className='groupHighlight'> {groupHighlight} </a>}
                         {!readStatus && <span className='notification--dot'></span>}
                     </p>

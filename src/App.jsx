@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NotificationBox from './components/NotificationBox'
 import data from './data'
 import ClearModal from './components/ClearModal'
 import celebrationGif from "./assets/jumping.gif"
+import popSound from "./assets/popSound.mp3"
 
 function App() {
+
+
   const [notificationData, setNotificationData] = useState(data)
 
   const [showModal, setShowModal] = useState(false)
@@ -29,9 +32,15 @@ function App() {
         return {...notification, msgStatus: true}
       })
     })
-
-    clickAway()
   }
+
+  useEffect(() => {
+    if (numOfUnread < 1) {
+      clickAway()
+      const pop = new Audio(popSound)
+      pop.play()
+    }
+  }, [numOfUnread])
 
   // Map over notification data and render
   const notifications = notificationData.map((items, index) => {
