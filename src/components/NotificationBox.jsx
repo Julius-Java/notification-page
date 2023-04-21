@@ -1,12 +1,10 @@
+import React from "react"
 import { useState } from "react"
 
 
 export default function NotificationBox(props) {
 
     const {avatar, trigger, message, postHighlight, groupHighlight, pictureHighlight: {highlightAvatar}, privateMsg, time} = props.items
-
-    // State derived from parent element to keep track of unread messages
-    // const [readStatus, setReadStatus] = useState(props.readStatus)
 
     const {id, setMsgStatus, readStatus} = props
 

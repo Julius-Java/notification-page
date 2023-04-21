@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, useEffect } from 'react'
 import NotificationBox from './components/NotificationBox'
 import data from './data'

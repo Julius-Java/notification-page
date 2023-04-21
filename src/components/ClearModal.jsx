@@ -1,3 +1,5 @@
+import React from "react";
+
 const ClearModal = ({gif, showModal, handleClick}) => {
 
     return (
