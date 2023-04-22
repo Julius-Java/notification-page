@@ -1,4 +1,5 @@
 import React from "react"
+import avatarImg from "../assets/images/avatar-angela-gray.png"
 import { useState } from "react"
 
 
@@ -13,7 +14,9 @@ export default function NotificationBox(props) {
         onClick={() => setMsgStatus(id)}
         style={{backgroundColor : !readStatus && "hsl(210, 60%, 98%)"}}
         className='notificationBox'>
-            <img className='avatar' src={"src/assets/images/" + avatar} />
+            {/* <img className='avatar' src={"src/assets/images/" + avatar} /> */}
+            <img className='avatar' src={avatar} alt="avatar" />
+
 
             <div className={'notification ' + (highlightAvatar && "pictureHighlight")}>
                 <div>
@@ -28,7 +31,7 @@ export default function NotificationBox(props) {
                     <p className='notification--time'>{time}</p>
                 </div>
 
-                {highlightAvatar && <img className='picture' src={'src/assets/images/' + highlightAvatar} />}
+                {highlightAvatar && <img className='picture' src={highlightAvatar} alt="avatar" />}
 
                 {privateMsg &&
                     <div className='privateMsg'>

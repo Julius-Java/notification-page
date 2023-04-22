@@ -36,7 +36,7 @@ body {
 
 #main {
   background-color: var(--neutral-white);
-  max-width: 630px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 2em 1em;
   min-height: 10vh;
@@ -169,17 +169,18 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .clearModal {
   background-color: white;
   max-width: 200px;
   width: 80%;
+  height: 180px;
   border-radius: 15px;
   text-align: center;
   font-size: 18px;
   padding: 1.2em 0;
+  margin-top: 3em;
 }
 
 .clearModal p {
@@ -195,11 +196,21 @@ body {
   #root {
     padding-block: 3em;
   }
+
   .clearModal {
     max-width: 300px;
   }
 
   .gif {
     width: 150px;
+  }
+
+  .overlay {
+    align-items: center;
+  }
+
+  .clearModal {
+    margin-top: 0;
+    height: auto;
   }
 }
