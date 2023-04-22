@@ -1,5 +1,4 @@
 import React from "react"
-import avatarImg from "../assets/images/avatar-angela-gray.png"
 import { useState } from "react"
 
 
@@ -14,7 +13,6 @@ export default function NotificationBox(props) {
         onClick={() => setMsgStatus(id)}
         style={{backgroundColor : !readStatus && "hsl(210, 60%, 98%)"}}
         className='notificationBox'>
-            {/* <img className='avatar' src={"src/assets/images/" + avatar} /> */}
             <img className='avatar' src={avatar} alt="avatar" />
 
 

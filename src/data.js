@@ -1,6 +1,6 @@
 const data = [
     {
-        avatar: "https://www.dropbox.com/s/nrxky01e9vshadh/avatar-mark-webber.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177278/avatar-mark-webber_zolbqz.png",
         trigger: "Mark Webber",
         message: "reacted to your recent post",
         postHighlight: "My first tournament today!",
@@ -14,7 +14,7 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/jt4ksx8o0kmxjhl/avatar-angela-gray.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177279/avatar-angela-gray_ymwovk.png",
         trigger: "Angela Gray",
         message: "followed you",
         postHighlight: false,
@@ -28,7 +28,7 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/qev06laola46bw4/avatar-jacob-thompson.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177279/avatar-jacob-thompson_rtelfi.png",
         trigger: "Jacob Thompson",
         message: "has joined your group",
         postHighlight: false,
@@ -42,7 +42,7 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/eaiy7t8ykzvne4a/avatar-rizky-hasanuddin.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177279/avatar-rizky-hasanuddin_v5z9ou.png",
         trigger: "Rikzy Hasanuddin",
         message: "sent you a private message",
         postHighlight: false,
@@ -56,13 +56,13 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/tbskwvtef6gkiaq/avatar-kimberly-smith.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177278/avatar-kimberly-smith_qtdgdb.png",
         trigger: "Kimberly Smith",
         message: "commented on your picture",
         postHighlight: false,
         groupHighlight: false,
         pictureHighlight: {
-            highlightAvatar: "https://www.dropbox.com/s/rp0xjmleqxg03ki/image-chess.png?dl=0"
+            highlightAvatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177292/image-chess_wnl65z.png"
         },
         privateMsg: false,
         time: "1 week ago",
@@ -70,7 +70,7 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/c5b7spcvxtcj0s9/avatar-nathan-peterson.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177279/avatar-nathan-peterson_qv9ss3.png",
         trigger: "Nathan Peterson",
         message: "reacted to your recent post",
         postHighlight: "5 end-game strategies to increase your win rate",
@@ -84,7 +84,7 @@ const data = [
     },
 
     {
-        avatar: "https://www.dropbox.com/s/qyytvgujo676v4w/avatar-anna-kim.png?dl=0",
+        avatar: "https://res.cloudinary.com/deyhgqi4x/image/upload/v1682177279/avatar-anna-kim_hr1lol.png",
         trigger: "Anna Kim",
         message: "left the group",
         postHighlight: false,
